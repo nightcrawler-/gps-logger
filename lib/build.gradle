@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
@@ -35,7 +35,7 @@ android {
 //    }
 
     defaultConfig {
-        applicationId "eu.basicairdata.graziano.gpslogger"
+        //applicationId "eu.basicairdata.graziano.gpslogger"
         minSdkVersion 14
         targetSdkVersion 29
 
