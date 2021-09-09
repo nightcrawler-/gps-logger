@@ -160,7 +160,7 @@
             android:key="prefExportKML"
             android:title="@string/pref_export_KML"
             android:summary="@string/pref_export_KML_summary"
-            android:defaultValue="true"/>
+            android:defaultValue="false"/>
 
         <androidx.preference.ListPreference
             android:key="prefKMLAltitudeMode"
