@@ -156,16 +156,16 @@ public class FragmentSettings extends PreferenceFragmentCompat {
                         }
                     }
                 }
-                if (key.equals("prefColorTheme")) {
-                    SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getContext());
-                    SharedPreferences.Editor editor1 = settings.edit();
-                    editor1.putString(key, sharedPreferences.getString(key, "2"));
-                    editor1.commit();
+                // if (key.equals("prefColorTheme")) {
+                //     SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getContext());
+                //     SharedPreferences.Editor editor1 = settings.edit();
+                //     editor1.putString(key, sharedPreferences.getString(key, "2"));
+                //     editor1.commit();
 
-                    getActivity().getWindow().setWindowAnimations(R.style.MyCrossfadeAnimation_Window);
-                    AppCompatDelegate.setDefaultNightMode(Integer.valueOf(PreferenceManager.getDefaultSharedPreferences(getContext()).getString("prefColorTheme", "2")));
-                    //getActivity().recreate();
-                }
+                //     getActivity().getWindow().setWindowAnimations(R.style.MyCrossfadeAnimation_Window);
+                //     AppCompatDelegate.setDefaultNightMode(Integer.valueOf(PreferenceManager.getDefaultSharedPreferences(getContext()).getString("prefColorTheme", "2")));
+                //     //getActivity().recreate();
+                // }
                 SetupPreferences();
             }
         };
