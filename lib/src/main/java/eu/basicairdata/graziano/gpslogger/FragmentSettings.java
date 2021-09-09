@@ -205,7 +205,7 @@ public class FragmentSettings extends PreferenceFragmentCompat {
         ListPreference pGPXVersion = findPreference("prefGPXVersion");
         ListPreference pShowTrackStatsType = findPreference("prefShowTrackStatsType");
         ListPreference pShowDirections = findPreference("prefShowDirections");
-        ListPreference pColorTheme = findPreference("prefColorTheme");
+        // ListPreference pColorTheme = findPreference("prefColorTheme");
         EditTextPreference pAltitudeCorrection = findPreference("prefAltitudeCorrectionRaw");
         Preference pTracksViewer = findPreference("prefTracksViewer");
 
@@ -311,7 +311,7 @@ public class FragmentSettings extends PreferenceFragmentCompat {
         Log.w("myApp", "[#] FragmentSettings.java - prefAltitudeCorrection = " + prefs.getString("prefAltitudeCorrection", "0")) ;
 
         // Set all summaries
-        pColorTheme.setSummary(pColorTheme.getEntry());
+        // pColorTheme.setSummary(pColorTheme.getEntry());
         pUMSpeed.setSummary(pUMSpeed.getEntry());
         pUM.setSummary(pUM.getEntry());
         pGPSDistance.setSummary(pGPSDistance.getEntry());
