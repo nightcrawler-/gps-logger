@@ -862,7 +862,7 @@ public class GPSApplication extends Application implements LocationListener {
     @Override
     public void onCreate() {
         // Sets the night mode, basing on App Preference
-        AppCompatDelegate.setDefaultNightMode(Integer.valueOf(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("prefColorTheme", "2")));
+        // AppCompatDelegate.setDefaultNightMode(Integer.valueOf(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("prefColorTheme", "2")));
         // Enables the Vector Drawable from Resource support
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
