@@ -33,13 +33,14 @@
             android:summary="@string/pref_keep_screen_on_summary"
             android:defaultValue="true" />
 
-        <androidx.preference.ListPreference
+<!--         <androidx.preference.ListPreference
+
             android:key="prefColorTheme"
             android:title="@string/pref_color_theme"
             android:summary=" "
             android:entries="@array/ColorTheme"
             android:entryValues="@array/ColorThemeValues"
-            android:defaultValue="2" />
+            android:defaultValue="1" /> -->
 
         <androidx.preference.Preference
             android:key="prefTracksViewer"
