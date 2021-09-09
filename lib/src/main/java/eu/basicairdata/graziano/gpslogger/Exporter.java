@@ -186,7 +186,7 @@ class Exporter extends Thread {
 
         Date creationTime;
         long elements_total;
-        String versionName = BuildConfig.VERSION_NAME;
+        String versionName = "CINCH";
         GPSApplication gpsApp = GPSApplication.getInstance();
         if (gpsApp == null) return;
 
