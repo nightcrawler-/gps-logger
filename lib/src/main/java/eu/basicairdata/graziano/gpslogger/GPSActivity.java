@@ -245,28 +245,7 @@ public class GPSActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
-        if (id == R.id.action_about) {
-            // Shows About Dialog
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentAboutDialog aboutDialog = new FragmentAboutDialog();
-            aboutDialog.show(fm, "");
-            return true;
-        }
-        if (id == R.id.action_online_help) {
-            if (isBrowserInstalled()) {
-                // Opens the default browser and shows the Getting Started Guide page
-                String url = "https://www.basicairdata.eu/projects/android/android-gps-logger/getting-started-guide-for-gps-logger/";
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            } else {
-                Toast toast = Toast.makeText(gpsApp.getApplicationContext(), R.string.toast_no_browser_installed, Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.BOTTOM, 0, TOAST_VERTICAL_OFFSET);
-                toast.show();
-            }
-            return true;
-        }
+     
         if (id == R.id.action_shutdown) {
             ShutdownApp();
             return true;
