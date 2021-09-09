@@ -25,9 +25,9 @@
 
     <!-- ======[ LIGHT THEME ]================================================================= -->
 
-    <color name="colorPrimary">#880000</color>
-    <color name="colorPrimaryDark">#550000</color>
-    <color name="colorPrimaryLight">#b51111</color>
+    <color name="colorPrimary">#49bfab</color>
+    <color name="colorPrimaryDark">#49bfab</color>
+    <color name="colorPrimaryLight">#49bfab</color>
     <color name="textColorPrimary">#111111</color>
     <color name="textColorCardTitle">#272727</color>
     <color name="textColorSecondary">#666666</color>
