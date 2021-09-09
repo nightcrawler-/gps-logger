@@ -84,29 +84,24 @@ public class ToolbarActionMode implements ActionMode.Callback {
     @Override
     public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
         if (!isActionmodeButtonPressed()) {
-            switch (item.getItemId()) {
-                case R.id.cardmenu_delete:
-                    setActionmodeButtonPressed(true);
-                    EventBus.getDefault().post(EventBusMSG.ACTION_BULK_DELETE_TRACKS);
-                    break;
-                case R.id.cardmenu_export:
-                    setActionmodeButtonPressed(true);
-                    EventBus.getDefault().post(EventBusMSG.ACTION_BULK_EXPORT_TRACKS);
-                    break;
-                case R.id.cardmenu_view:
-                    setActionmodeButtonPressed(true);
-                    EventBus.getDefault().post(EventBusMSG.ACTION_BULK_VIEW_TRACKS);
-                    break;
-                case R.id.cardmenu_share:
-                    setActionmodeButtonPressed(true);
-                    EventBus.getDefault().post(EventBusMSG.ACTION_BULK_SHARE_TRACKS);
-                    break;
-                case R.id.cardmenu_edit:
-                    setActionmodeButtonPressed(true);
-                    EventBus.getDefault().post(EventBusMSG.ACTION_EDIT_TRACK);
-                    break;
-                default:
-                    return false;
+            int itemId = item.getItemId();
+            if (itemId == R.id.cardmenu_delete) {
+                setActionmodeButtonPressed(true);
+                EventBus.getDefault().post(EventBusMSG.ACTION_BULK_DELETE_TRACKS);
+            } else if (itemId == R.id.cardmenu_export) {
+                setActionmodeButtonPressed(true);
+                EventBus.getDefault().post(EventBusMSG.ACTION_BULK_EXPORT_TRACKS);
+            } else if (itemId == R.id.cardmenu_view) {
+                setActionmodeButtonPressed(true);
+                EventBus.getDefault().post(EventBusMSG.ACTION_BULK_VIEW_TRACKS);
+            } else if (itemId == R.id.cardmenu_share) {
+                setActionmodeButtonPressed(true);
+                EventBus.getDefault().post(EventBusMSG.ACTION_BULK_SHARE_TRACKS);
+            } else if (itemId == R.id.cardmenu_edit) {
+                setActionmodeButtonPressed(true);
+                EventBus.getDefault().post(EventBusMSG.ACTION_EDIT_TRACK);
+            } else {
+                return false;
             }
             return true;
         }
