@@ -910,8 +910,8 @@ public class GPSApplication extends Application implements LocationListener {
 
         TOAST_VERTICAL_OFFSET = (int)(75 * getResources().getDisplayMetrics().density);
 
-        DIRECTORY_TEMP = Environment.getExternalStorageDirectory() + "/GPSLogger/Temp";
-        DIRECTORY_EXPORT = Environment.getExternalStorageDirectory() + "/GPSLogger";
+        DIRECTORY_TEMP = getApplicationContext().getExternalFilesDir(null) + "/GPSLogger/Temp";
+        DIRECTORY_EXPORT = getApplicationContext().getExternalFilesDir(null) + "/GPSLogger";
         DIRECTORY_FILESDIR_TRACKS = getApplicationContext().getFilesDir() + "/URI";
         FILE_EMPTY_GPX = DIRECTORY_FILESDIR_TRACKS + "/empty.gpx";
         FILE_EMPTY_KML = DIRECTORY_FILESDIR_TRACKS + "/empty.kml";
