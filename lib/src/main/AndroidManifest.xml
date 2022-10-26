@@ -70,7 +70,8 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <receiver android:name=".ActionsBroadcastReceiver">
+        <receiver android:name=".ActionsBroadcastReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
             </intent-filter>
