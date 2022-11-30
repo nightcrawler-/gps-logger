@@ -24,6 +24,7 @@
 <resources>
     <string name="app_name" translatable="false">GPS Logger</string>
 
+    <string name="provider_authorities" translatable="false">eu.basicairdata.graziano.gpslogger.fileprovider</string>
     <!-- Tabs -->
     <string name="tab_gpsfix">GPS Fix</string>
     <string name="tab_track">Track</string>

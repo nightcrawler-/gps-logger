@@ -78,7 +78,7 @@ public class ExternalViewerChecker {
          *                 The valid values are GPSApplication.FILETYPE_KML (the viewer supports KML)
          *                 and GPSApplication.FILETYPE_GPX (the viewer supports GPX.
          */
-        FileType (ArrayList<String> packages, String mimeType, String fileType) {
+        FileType(ArrayList<String> packages, String mimeType, String fileType) {
             this.packages = packages;
             this.fileType = fileType;
             this.mimeType = mimeType;
@@ -118,7 +118,7 @@ public class ExternalViewerChecker {
         ArrayList<FileType> fileTypeList = new ArrayList<>();
 
         fileTypeList.add(new FileType(null, "application/gpx+xml", FILETYPE_GPX));                      // The preferred format first
-        fileTypeList.add(new FileType(null, "application/vnd.google-earth.kml+xml",  FILETYPE_KML));
+        fileTypeList.add(new FileType(null, "application/vnd.google-earth.kml+xml", FILETYPE_KML));
 
         // We can add new MimeTypes, also with filtered lists!
         // for example this one:
@@ -133,7 +133,7 @@ public class ExternalViewerChecker {
             //intent.setType(ft.mimeType);
 
             File file = new File(ft.mimeType.equals(FILETYPE_GPX) ? FILE_EMPTY_GPX : FILE_EMPTY_KML);
-            Uri uri = FileProvider.getUriForFile(GPSApplication.getInstance(), "eu.basicairdata.graziano.gpslogger.fileprovider", file);
+            Uri uri = FileProvider.getUriForFile(GPSApplication.getInstance(), context.getString(R.string.provider_authorities), file);
             intent.setDataAndType(uri, ft.mimeType);
 
 //            File file = new File(ft.mimeType.equals(FILETYPE_GPX) ? EMPTY_GPX : EMPTY_KML);

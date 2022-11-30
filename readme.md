@@ -60,3 +60,10 @@ Join Us on [Crowdin](https://crowdin.com/project/gpslogger) and help to translat
 
 <b>Q</b> - <b>Why is GPS FIX Time different from the Time of my Android Device?</b><br>
 <b>A</b> - Your Android Time could differ from GPS Time depending on Time Zone and on Daylight Saving. Starting from GPSLogger v2.2.10, You can go on App's Settings, section Interface, and verify that the GPS Time is Shown in Local Timezone instead of global GPS Time (UTC based). If not, switch on the Setting. Speaking of dates, it is important to point out that the app exports all the Timestamps in UTC, as required by KML and GPX standards. The local Time is used only for Track Names, for User Convenience. As a Note, the Time of the GPS should be slightly different from Android Time (some Seconds of Difference are common).
+
+
+## Update 2022
+
+Be seure to set this value in your strings.xm file:
+<string name="provider_authorities" translatable="false">[your app id].fileprovider</string>
+
